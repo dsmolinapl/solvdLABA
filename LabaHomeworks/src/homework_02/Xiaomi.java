@@ -7,7 +7,18 @@ public class Xiaomi {
 	private double screenSize;
 	private double phoneWeight;
 	private int batteryLife; // hours
+	private Display display = new Display(720,988);
 	
+	
+	
+	public Display getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(Display display) {
+		this.display = display;
+	}
+
 	public Xiaomi (String color) {
 		this.color = color;	
 	}

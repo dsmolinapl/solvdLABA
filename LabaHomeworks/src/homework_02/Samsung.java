@@ -7,6 +7,8 @@ public class Samsung {
 	private double screenSize;
 	private double phoneWeight;
 	private boolean isExpensive;
+	private Display display = new Display(1080,720);
+	
 	
 	public Samsung (boolean isExpensive) {
 		this.isExpensive = isExpensive;
@@ -15,6 +17,14 @@ public class Samsung {
 	public String getColor() {
 		return color;
 	}
+	public Display getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(Display display) {
+		this.display = display;
+	}
+
 	public void setColor(String color) {	
 		
 		this.color = color;

@@ -7,7 +7,18 @@ public class Motorola {
 	private double screenSize;
 	private double phoneWeight;
 	private int batteryLife;
+	private Display display = new Display(375 , 667);
 	
+	
+	
+	public Display getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(Display display) {
+		this.display = display;
+	}
+
 	public Motorola (String color) {
 		this.color = color;
 	}

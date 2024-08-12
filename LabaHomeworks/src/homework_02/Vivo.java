@@ -6,6 +6,8 @@ public class Vivo {
 	private int memoryСapacity;
 	private double screenSize;
 	private double phoneWeight;
+	private Display display = new Display(390 , 844);
+	
 	
 	public Vivo(String color) {
 		this.color = color;
@@ -44,6 +46,15 @@ public class Vivo {
 	public String getBrand() {
 		return brand;
 	}
+
+	public Display getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(Display display) {
+		this.display = display;
+	}
+	
 		
 
 }

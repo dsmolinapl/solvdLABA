@@ -8,7 +8,16 @@ public class IPhone {
 	private double screenSize;
 	private double phoneWeight;
 	private boolean isButtons;
+	private Display display = new Display(414,896);
 	
+	public Display getDisplay() {
+		return display;
+	}
+
+	public void setDisplay(Display display) {
+		this.display = display;
+	}
+
 	public IPhone (String color) {
 		this.color = color;
 	}
