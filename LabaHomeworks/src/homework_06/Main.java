@@ -5,7 +5,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main {
+	final static Logger LOGGER = LogManager.getLogger();
+	
 	public static void main(String[] args) {
 
 		IPhone myIPhone = new IPhone("white");
@@ -17,7 +22,9 @@ public class Main {
 
 		myIPhone.addAdrress("Moon Street, house 9486 ");
 
-		System.out.println(myIPhone.getAdress());
+		LOGGER.info("Hello!");
+		
+		LOGGER.info(myIPhone.getAdress());
 		Set<String> newSet = myIPhone.getAdress();
 
 		Map<String, Integer> soldPhones = new HashMap<>();
