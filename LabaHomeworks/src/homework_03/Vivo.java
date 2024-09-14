@@ -1,6 +1,10 @@
 package homework_03;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Vivo extends Phone {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "Vivo";
 	private Display display = new Display(390, 844);
 
@@ -16,7 +20,7 @@ public class Vivo extends Phone {
 
 	public void setColor(String color) {
 		if (color == "blue" || color == "black" || color == "white") {
-			System.out.println("It is a great choice" + color);
+			LOGGER.info("It is a great choice" + color);
 		}
 		this.color = color;
 	}
@@ -27,7 +31,7 @@ public class Vivo extends Phone {
 
 	public void setMemoryСapacity(int memoryСapacity) {
 		if (memoryСapacity != 64 && memoryСapacity != 128 && memoryСapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else
 			this.memoryCapacity = memoryСapacity;
 	}
@@ -46,7 +50,7 @@ public class Vivo extends Phone {
 
 	@Override
 	public void helloMassage() {
-		System.out.println("Hello, " + brand + "'s user!");
+		LOGGER.info("Hello, " + brand + "'s user!");
 		
 	}
 

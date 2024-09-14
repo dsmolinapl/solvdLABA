@@ -1,7 +1,11 @@
 package homework_04;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main {
 	public static void main(String[] args) {
+		final  Logger LOGGER = LogManager.getLogger();
 
 		IPhone myIPhone = new IPhone("white");
 		IPhone myIPhone2 = new IPhone("white");
@@ -12,10 +16,10 @@ public class Main {
 
 		Headphones iPhoneHeadphones = new Headphones("IPhone");
 		Headphones samsungHeadphones = new Headphones("Samsung");
-		System.out.println("WireLength IPhone: " + iPhoneHeadphones.WireLength);
-		System.out.println("WireLength Samsung: " + samsungHeadphones.WireLength);
+		LOGGER.info("WireLength IPhone: " + iPhoneHeadphones.WireLength);
+		LOGGER.info("WireLength Samsung: " + samsungHeadphones.WireLength);
 		Headphones.soundVolume = 30;
-		System.out.println(Headphones.soundVolume);
+		LOGGER.info(Headphones.soundVolume);
 
 		myIPhone.call();
 		myIPhone.photograph();

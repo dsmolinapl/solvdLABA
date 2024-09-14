@@ -1,6 +1,10 @@
 package homework_03;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Xiaomi extends Phone {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 
 	private String brand = "Xiaomi";
 	private int batteryLife; // hours
@@ -30,7 +34,7 @@ public class Xiaomi extends Phone {
 
 	public void setMemoryСapacity(int memoryCapacity) {
 		if (memoryCapacity != 64 && memoryCapacity != 128 && memoryCapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else
 			this.memoryCapacity = memoryCapacity;
 	}
@@ -41,7 +45,7 @@ public class Xiaomi extends Phone {
 
 	public void setBatteryLife(int batteryLife) {
 		if (batteryLife < 16) {
-			System.out.println(" Battery life is not very good ");
+			LOGGER.info(" Battery life is not very good ");
 		}
 		this.batteryLife = batteryLife;
 
@@ -49,7 +53,7 @@ public class Xiaomi extends Phone {
 
 	@Override
 	public void helloMassage() {
-		System.out.println("Hello, " + brand + "'s user!");
+		LOGGER.info("Hello, " + brand + "'s user!");
 		
 	}
 

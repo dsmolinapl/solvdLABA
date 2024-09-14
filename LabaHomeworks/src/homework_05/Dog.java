@@ -1,5 +1,8 @@
 package homework_05;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import homework_05.exceptions.WrongAgeException;
 import homework_05.exceptions.WrongBreedException;
 import homework_05.exceptions.WrongColorException;
@@ -7,6 +10,7 @@ import homework_05.exceptions.WrongCommandsException;
 import homework_05.exceptions.WrongNameException;
 
 public class Dog {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String name;
 	private int age;
 	private String breed;// порода
@@ -25,7 +29,7 @@ public class Dog {
 		if (age > 50) {
 			throw new WrongAgeException("It's wrong age for dog! The age must be < 50 ");
 		}
-		System.out.println("Age is : " + age);
+		LOGGER.info("Age is : " + age);
 		this.age = age;
 	}
 
@@ -40,7 +44,7 @@ public class Dog {
 		if (name.length() <= 0) {
 			throw new WrongNameException("Please, enter the dog's name");
 		}
-		System.out.println("The name is : " + name);
+		LOGGER.info("The name is : " + name);
 		this.name = name;
 	}
 
@@ -55,7 +59,7 @@ public class Dog {
 		if (breed.length() == 0) {
 			throw new WrongBreedException("Please, enter the dog's breed");
 		}
-		System.out.println("The breed is: " + breed);
+		LOGGER.info("The breed is: " + breed);
 		this.breed = breed;
 	}
 
@@ -68,16 +72,16 @@ public class Dog {
 			throw new WrongCommandsException("Please, enter commands");
 		} else {
 			if (commands.equals("jump")) {
-				System.out.println("Dog can jump!");
+				LOGGER.info("Dog can jump!");
 			} else {
 				if (commands.equals("lie")) {
-					System.out.println("Dog can lie!");
+					LOGGER.info("Dog can lie!");
 				} else {
 					if (commands.equals("sit")) {
-						System.out.println("Dog can sit!");
+						LOGGER.info("Dog can sit!");
 					} else {
 						if (commands.equals("dance")) {
-							System.out.println("Dog can dance!");
+							LOGGER.info("Dog can dance!");
 						} else {
 							throw new WrongCommandsException("These commands '"+ commands + "' are unknown");
 						}
@@ -100,7 +104,7 @@ public class Dog {
 			throw new WrongColorException("Wrong color. You can enter < 10 letters");
 		}
 		this.color = color;
-		System.out.println("The dog's color  is : " + color);
+		LOGGER.info("The dog's color  is : " + color);
 	}
 
 }

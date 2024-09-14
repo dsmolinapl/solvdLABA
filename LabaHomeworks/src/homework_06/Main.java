@@ -32,15 +32,15 @@ public class Main {
 		soldPhones.put("Boris", 1086);
 		soldPhones.put("Anna", 4576);
 		soldPhones.put("Sveta", 986);
-		System.out.println("Sold Phone is : " + soldPhones.get("Sveta"));
+		LOGGER.info("Sold Phone is : " + soldPhones.get("Sveta"));
 
-		System.out.println("Number of model IPhons is: " + myIPhone.getNumModel());
+		LOGGER.info("Number of model IPhons is: " + myIPhone.getNumModel());
 		List<Integer> newList = myIPhone.getNumModel();
 
 		myIPhone.addNumModel(7);
 
-		System.out.println("  ");
-		System.out.println(" Custom LinkedList:  ");
+		LOGGER.info("  ");
+		LOGGER.info(" Custom LinkedList:  ");
 		CustomLinkedList customLinkedList = new CustomLinkedList();
 		customLinkedList.insert(1);
 		customLinkedList.insert(2);
@@ -48,12 +48,12 @@ public class Main {
 		customLinkedList.insert(4);
 		customLinkedList.display();
 		customLinkedList.insertAt(2, 10);
-		System.out.println("  ");
+		LOGGER.info("  ");
 		customLinkedList.display();
-		System.out.println("  ");
+		LOGGER.info("  ");
 		customLinkedList.insertHead(100);
 		customLinkedList.display();
-		System.out.println("  ");
+		LOGGER.info("  ");
 		customLinkedList.deleteNodeAt(1);
 		customLinkedList.display();
 

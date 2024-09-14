@@ -1,6 +1,10 @@
 package homework_02;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Motorola {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "Motorola";
 	private String color;
 	private int memoryСapacity;
@@ -34,7 +38,7 @@ public class Motorola {
 	}
 	public void setMemoryСapacity(int memoryСapacity) {
 		if(memoryСapacity != 64 && memoryСapacity != 128 && memoryСapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else 
 		this.memoryСapacity = memoryСapacity;
 	}
@@ -49,7 +53,7 @@ public class Motorola {
 	}
 	public void setPhoneWeight(double phoneWeight) {
 		if(phoneWeight>1.5) {
-			System.out.println("Sorry, you entered the wrong weight.");
+			LOGGER.info("Sorry, you entered the wrong weight.");
 		}
 		this.phoneWeight = phoneWeight;
 	}

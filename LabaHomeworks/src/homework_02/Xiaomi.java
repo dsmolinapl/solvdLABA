@@ -1,6 +1,10 @@
 package homework_02;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Xiaomi {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "Xiaomi";
 	private String color;
 	private int memoryСapacity;
@@ -38,7 +42,7 @@ public class Xiaomi {
 	}
 	public void setMemoryСapacity(int memoryСapacity) {
 		if(memoryСapacity != 64 && memoryСapacity != 128 && memoryСapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else 
 		this.memoryСapacity = memoryСapacity;
 	}
@@ -59,7 +63,7 @@ public class Xiaomi {
 	}
 	public void setBatteryLife(int batteryLife) {
 		if (batteryLife < 16) {
-			System.out.println(" Battery life is not very good ");
+			LOGGER.info(" Battery life is not very good ");
 		}
 		this.batteryLife = batteryLife;
 		

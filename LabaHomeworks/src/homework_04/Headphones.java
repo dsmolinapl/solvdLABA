@@ -1,7 +1,10 @@
 package homework_04;
 
-public final class Headphones {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+public final class Headphones {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	static final int WireLength = 15;
 
 	String modelPhone;
@@ -9,11 +12,11 @@ public final class Headphones {
 	static int soundVolume = 50;// static variable 
 
 	static {
-		System.out.println(" Static block");// static block
+		LOGGER.info(" Static block");// static block
 	}
 
 	public static void charge() {
-		System.out.println(" plug in the charger "); // - static method
+		LOGGER.info(" plug in the charger "); // - static method
 	}
 
 	public Headphones(String name) {
@@ -21,6 +24,6 @@ public final class Headphones {
 	}
 
 	public final void connect() {
-		System.out.println(" Headphones plugged in! ");
+		LOGGER.info(" Headphones plugged in! ");
 	}
 }

@@ -1,7 +1,12 @@
 package homework_03;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	public static void main(String[] args) {
+		
 
 		IPhone myIPhone = new IPhone("white");
 		IPhone myIPhone2 = new IPhone("white");
@@ -10,23 +15,23 @@ public class Main {
 		Vivo myVivo = new Vivo("white");
 		Xiaomi myXiaomi = new Xiaomi("blue");
 
-		System.out.println("Equals for Displays : " + myIPhone.getDisplay().equals(myXiaomi.getDisplay()));
-		System.out.println("Equals for color, memoryCapacity, phoneWeight : " + myMotorola.equals(mySamsung));
-		System.out.println("myIPhone hashCode : " + myIPhone.hashCode());
+		LOGGER.info("Equals for Displays : " + myIPhone.getDisplay().equals(myXiaomi.getDisplay()));
+		LOGGER.info("Equals for color, memoryCapacity, phoneWeight : " + myMotorola.equals(mySamsung));
+		LOGGER.info("myIPhone hashCode : " + myIPhone.hashCode());
 
 		myIPhone.setMemoryCapacity(256);
-		System.out.println(myIPhone.getMemoryCapacity());
+		LOGGER.info(myIPhone.getMemoryCapacity());
 
 		myMotorola.setPhoneWeight(1.3);
-		System.out.println(myMotorola.getPhoneWeight());
+		LOGGER.info(myMotorola.getPhoneWeight());
 		myMotorola.setMemoryСapacity(64);
-		System.out.println(myMotorola.getMemoryCapacity());
+		LOGGER.info(myMotorola.getMemoryCapacity());
 
-		System.out.println(myIPhone.toString());
-		System.out.println(myMotorola.toString());
-		System.out.println(mySamsung.toString());
-		System.out.println(myVivo.toString());
-		System.out.println(myXiaomi.toString());
+		LOGGER.info(myIPhone.toString());
+		LOGGER.info(myMotorola.toString());
+		LOGGER.info(mySamsung.toString());
+		LOGGER.info(myVivo.toString());
+		LOGGER.info(myXiaomi.toString());
 
 	}
 

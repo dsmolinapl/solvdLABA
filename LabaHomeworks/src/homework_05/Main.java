@@ -5,12 +5,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import homework_05.exceptions.WrongAgeException;
 import homework_05.exceptions.WrongBreedException;
 import homework_05.exceptions.WrongColorException;
 import homework_05.exceptions.WrongNameException;
 
 public class Main {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	public static void main(String[] args) throws WrongBreedException, WrongColorException {
 
 		Dog dog = new Dog();
@@ -22,25 +26,25 @@ public class Main {
 		try {
 			dog.setAge(-10);
 		} catch (WrongAgeException e) {
-			System.out.println("Skipping age error");
+			LOGGER.info("Skipping age error");
 		}
 		try {
 			dog.setName("Bobby");
 		} catch (WrongNameException e) {
-			System.out.println("Skipping name error");
+			LOGGER.info("Skipping name error");
 		}
 		try (Scanner scanner = new Scanner(System.in)) { // Scanner object
 			int a = Integer.parseInt(scanner.next());
-			System.out.println("You entered: " + a);
+			LOGGER.info("You entered: " + a);
 		} catch (NumberFormatException e) {
-			System.out.println("Wrong number!");
+			LOGGER.info("Wrong number!");
 		}
 		try (FileReader fileReader = new FileReader("src/homework_05/infoDog.txt")) {
-			System.out.println(fileReader.read());
+			LOGGER.info(fileReader.read());
 		} catch (FileNotFoundException e) {
-			System.out.println("File not found!");
+			LOGGER.info("File not found!");
 		} catch (IOException e) {
-			System.out.println("IO exception!");
+			LOGGER.info("IO exception!");
 		}
 	}
 

@@ -1,7 +1,10 @@
 package homework_02;
 
-public class IPhone {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+public class IPhone {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "IPhone";
 	private String color;
 	private int memoryСapacity;
@@ -36,7 +39,7 @@ public class IPhone {
 
 	public void setMemoryСapacity(int memoryСapacity) {
 		if (memoryСapacity != 64 && memoryСapacity != 128 && memoryСapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else
 			this.memoryСapacity = memoryСapacity;
 	}

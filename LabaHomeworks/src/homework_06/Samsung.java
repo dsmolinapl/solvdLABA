@@ -1,5 +1,8 @@
 package homework_06;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import homework_04.interfaces.Callable;
 import homework_04.interfaces.Flashlight;
 import homework_04.interfaces.Gameable;
@@ -7,6 +10,8 @@ import homework_04.interfaces.ICalculate;
 import homework_04.interfaces.IPhotograph;
 
 public class Samsung extends Phone implements Callable, IPhotograph, Gameable, ICalculate, Flashlight {
+	
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "Samsung";
 	private double screenSize;
 	private boolean isExpensive;
@@ -14,28 +19,28 @@ public class Samsung extends Phone implements Callable, IPhotograph, Gameable, I
 
 	@Override
 	public void flashlight() {
-		System.out.println("I have lashlight");
+		LOGGER.info("I have lashlight");
 	}
 
 	@Override
 	public void calculate() {
-		System.out.println("I can calculate");
+		LOGGER.info("I can calculate");
 	}
 
 	@Override
 	public void game() {
-		System.out.println("I have games");
+		LOGGER.info("I have games");
 	}
 
 	@Override
 	public void call() {
-		System.out.println("I can call");
+		LOGGER.info("I can call");
 	}
 
 	@Override
 	public void photograph() {
 
-		System.out.println("I can photograph");
+		LOGGER.info("I can photograph");
 
 	}
 
@@ -60,7 +65,7 @@ public class Samsung extends Phone implements Callable, IPhotograph, Gameable, I
 
 	public void setMemoryСapacity(int memoryСapacity) {
 		if (memoryСapacity != 64 && memoryСapacity != 128 && memoryСapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else
 			this.memoryCapacity = memoryСapacity;
 	}
@@ -87,7 +92,7 @@ public class Samsung extends Phone implements Callable, IPhotograph, Gameable, I
 
 	@Override
 	public void helloMassage() {
-		System.out.println("Hello, " + brand + "'s user!");
+		LOGGER.info("Hello, " + brand + "'s user!");
 
 	}
 

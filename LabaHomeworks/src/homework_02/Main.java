@@ -1,6 +1,10 @@
 package homework_02;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	public static void main (String[]args) {
 		
 		IPhone myIPhone = new IPhone("white");
@@ -10,12 +14,12 @@ public class Main {
 		Xiaomi myXiaomi = new Xiaomi("blue");
 		
 		myIPhone.setMemoryСapacity(256);
-		System.out.println(myIPhone.getMemoryСapacity());
+		LOGGER.info(myIPhone.getMemoryСapacity());
 		
 		myMotorola.setPhoneWeight(1.3);
-		System.out.println(myMotorola.getPhoneWeight());
+		LOGGER.info(myMotorola.getPhoneWeight());
 		myMotorola.setMemoryСapacity(156);
-		System.out.println(myMotorola.getMemoryСapacity());
+		LOGGER.info(myMotorola.getMemoryСapacity());
 		
 		
 		

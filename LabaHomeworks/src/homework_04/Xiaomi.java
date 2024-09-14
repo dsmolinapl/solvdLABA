@@ -1,5 +1,8 @@
 package homework_04;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import homework_04.interfaces.Callable;
 import homework_04.interfaces.Flashlight;
 import homework_04.interfaces.Gameable;
@@ -7,35 +10,35 @@ import homework_04.interfaces.ICalculate;
 import homework_04.interfaces.IPhotograph;
 
 public class Xiaomi extends Phone implements Callable, IPhotograph, Gameable, ICalculate, Flashlight {
-
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "Xiaomi";
 	private int batteryLife; // hours
 	private Display display = new Display(720, 988);
 
 	@Override
 	public void flashlight() {
-		System.out.println("I have lashlight");
+		LOGGER.info("I have lashlight");
 	}
 
 	@Override
 	public void calculate() {
-		System.out.println("I can calculate");
+		LOGGER.info("I can calculate");
 	}
 
 	@Override
 	public void game() {
-		System.out.println("I have games");
+		LOGGER.info("I have games");
 	}
 
 	@Override
 	public void call() {
-		System.out.println("I can call");
+		LOGGER.info("I can call");
 	}
 
 	@Override
 	public void photograph() {
 
-		System.out.println("I can photograph");
+		LOGGER.info("I can photograph");
 
 	}
 
@@ -63,7 +66,7 @@ public class Xiaomi extends Phone implements Callable, IPhotograph, Gameable, IC
 
 	public void setMemoryСapacity(int memoryCapacity) {
 		if (memoryCapacity != 64 && memoryCapacity != 128 && memoryCapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else
 			this.memoryCapacity = memoryCapacity;
 	}
@@ -74,7 +77,7 @@ public class Xiaomi extends Phone implements Callable, IPhotograph, Gameable, IC
 
 	public void setBatteryLife(int batteryLife) {
 		if (batteryLife < 16) {
-			System.out.println(" Battery life is not very good ");
+			LOGGER.info(" Battery life is not very good ");
 		}
 		this.batteryLife = batteryLife;
 
@@ -82,7 +85,7 @@ public class Xiaomi extends Phone implements Callable, IPhotograph, Gameable, IC
 
 	@Override
 	public void helloMassage() {
-		System.out.println("Hello, " + brand + "'s user!");
+		LOGGER.info("Hello, " + brand + "'s user!");
 
 	}
 

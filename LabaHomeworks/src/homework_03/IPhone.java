@@ -2,7 +2,11 @@ package homework_03;
 
 import java.util.Objects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class IPhone extends Phone {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 
 	private String brand = "IPhone";
 	private boolean isButtons;
@@ -50,7 +54,7 @@ public class IPhone extends Phone {
 
 	public void setMemoryCapacity(int memoryCapacity) {
 		if (memoryCapacity != 64 && memoryCapacity != 128 && memoryCapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else
 			this.memoryCapacity = memoryCapacity;
 	}
@@ -69,7 +73,7 @@ public class IPhone extends Phone {
 
 	@Override
 	public void helloMassage() {
-		System.out.println("Hello, " + brand + "'s user!");
+		LOGGER.info("Hello, " + brand + "'s user!");
 		
 	}
 

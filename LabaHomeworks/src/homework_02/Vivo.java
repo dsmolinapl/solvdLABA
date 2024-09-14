@@ -1,6 +1,10 @@
 package homework_02;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Vivo {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String brand = "Vivo";
 	private String color;
 	private int memoryСapacity;
@@ -18,7 +22,7 @@ public class Vivo {
 	}
 	public void setColor(String color) {
 		if (color == "blue" || color == "black" || color == "white") {
-			System.out.println( "It is a great choice" + color );
+			LOGGER.info( "It is a great choice" + color );
 		}
 		this.color = color;
 	}
@@ -27,7 +31,7 @@ public class Vivo {
 	}
 	public void setMemoryСapacity(int memoryСapacity) {
 		if(memoryСapacity != 64 && memoryСapacity != 128 && memoryСapacity != 256) {
-			System.out.println(" Incorrect value. Please check if the data is correct.");
+			LOGGER.info(" Incorrect value. Please check if the data is correct.");
 		} else 
 		this.memoryСapacity = memoryСapacity;
 	}

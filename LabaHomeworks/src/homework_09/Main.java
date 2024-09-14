@@ -1,16 +1,23 @@
 package homework_09;
 
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.lang.reflect.*;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Main {
+	final static Logger LOGGER = LogManager.getLogger();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException,
+			IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+
+
 
 		for (Phone phone : Phone.values()) {
 
-			System.out.println("'" + phone.getName() + "' have camera : " + phone.getCamera().getCamera()
+			LOGGER.info("'" + phone.getName() + "' have camera : " + phone.getCamera().getCamera()
 					+ " with resolution : " + phone.getCamera().getCameraResolution().getResolution());
 		}
 
@@ -19,9 +26,10 @@ public class Main {
 
 		IBetter<CameraResolution> funcBetCamRes = (x, y) -> (x.getResolution() > y.getResolution());
 
-		System.out.println(funcSumCamRes.sum(CameraResolution.LOW_RESOLUTION, CameraResolution.HIGH_RESOLUTION));
-		System.out.println(funcBetCamRes.better(CameraResolution.HIGH_RESOLUTION, CameraResolution.SUPER_RESOLUTION));
-		System.out.println("your laptop already " + funcPrintModelYear.message(new Laptop(2020)) + " years");
+		LOGGER.info(funcSumCamRes.sum(CameraResolution.LOW_RESOLUTION, CameraResolution.HIGH_RESOLUTION));
+		LOGGER.info(funcBetCamRes.better(CameraResolution.HIGH_RESOLUTION, CameraResolution.SUPER_RESOLUTION));
+		LOGGER.info("your laptop already " + funcPrintModelYear.message(new Laptop(2020)) + " years");
+		LOGGER.info("your laptop already " + funcPrintModelYear.message(new Laptop(2020)) + " years");
 	}
 
 }

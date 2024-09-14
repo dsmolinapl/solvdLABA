@@ -2,7 +2,11 @@ package homework_06;
 
 import java.util.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class CustomLinkedList {
+	private static  final  Logger LOGGER = LogManager.getLogger();
 	private Node head;
 
 	public CustomLinkedList() {
@@ -49,10 +53,10 @@ public class CustomLinkedList {
 		if (head != null) {
 			Node currentNode = head;
 			while (currentNode.getNextNode() != null) {
-				System.out.println(currentNode.getData());
+				LOGGER.info(currentNode.getData());
 				currentNode = currentNode.getNextNode();
 			}
-			System.out.println(currentNode.getData());
+			LOGGER.info(currentNode.getData());
 		}
 	}
 
