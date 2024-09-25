@@ -16,6 +16,7 @@ public class Dog {
 	private String breed;
 	private String commands = "Jump";
 	private String color;
+	private String strSample;
 	
 
 	public int getAge() {
