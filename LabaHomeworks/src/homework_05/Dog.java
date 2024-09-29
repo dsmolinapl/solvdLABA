@@ -13,7 +13,7 @@ public class Dog {
 	private static  final  Logger LOGGER = LogManager.getLogger();
 	private String name;
 	private int age;
-	private String breed;// порода
+	private String breed;
 	private String commands = "Jump";
 	private String color;
 	private String strSample;
