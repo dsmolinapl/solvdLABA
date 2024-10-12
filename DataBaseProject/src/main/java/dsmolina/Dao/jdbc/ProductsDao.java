@@ -10,27 +10,28 @@ import dsmolina.MyConnectionPool;
 import dsmolina.Dao.IProductDAO;
 import dsmolina.model.Products;
 
-public class ProductsDao implements IProductDAO{
-	
-	static MyConnectionPool connectionPool =  MyConnectionPool.create();
+public class ProductsDao implements IProductDAO {
+
+	static MyConnectionPool connectionPool = MyConnectionPool.create();
 
 	@Override
 	public Products getEntityById(int index) {
 		Products products = new Products(null, index);
 		Connection connection = null;
 		try {
-			 connection = connectionPool.getConnection();
-		String query = "SELECT * FROM orderssql.products  where product_id = ?";
+			connection = connectionPool.getConnection();
+			String query = "SELECT * FROM orderssql.products  where product_id = ?";
 			PreparedStatement preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setInt(1, index);
 			ResultSet resultSet = preparedStatement.executeQuery();
-			if(resultSet.next()) {
+			if (resultSet.next()) {
 				products.setName(resultSet.getString("product_name"));
 				products.setPrice(resultSet.getInt("product_price"));
 			}
 		} catch (SQLException e) {
-			System.out.println("Error");;
-		}finally {
+			System.out.println("Error");
+			;
+		} finally {
 			connectionPool.releaseConnection(connection);
 		}
 		return products;
@@ -44,41 +45,38 @@ public class ProductsDao implements IProductDAO{
 
 	@Override
 	public void insert(Products products) {
-		
+
 		String query = "INSERT INTO `orderssql`.`products`(`product_name`,`product_price`)VALUES(?,?)";
-		Connection connection =null;
+		Connection connection = null;
 		try {
-		connection = connectionPool.getConnection();
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
-		preparedStatement.setString(1,products.getName());
-		preparedStatement.setInt(2, products.getPrice());
-		preparedStatement.execute();
-		}catch(SQLException e) {
+			connection = connectionPool.getConnection();
+			PreparedStatement preparedStatement = connection.prepareStatement(query);
+			preparedStatement.setString(1, products.getName());
+			preparedStatement.setInt(2, products.getPrice());
+			preparedStatement.execute();
+		} catch (SQLException e) {
 			System.out.println("ERROR");
-		} 		
-		finally {
-	        connectionPool.releaseConnection(connection);
-	    }
+		} finally {
+			connectionPool.releaseConnection(connection);
+		}
 	}
 
 	@Override
 	public void delete(int index) {
 		Connection connection = null;
 		try {
-			 connection = connectionPool.getConnection();
-		String query = "DELETE  FROM orderssql.products  WHERE product_id = ?";
+			connection = connectionPool.getConnection();
+			String query = "DELETE  FROM orderssql.products  WHERE product_id = ?";
 			PreparedStatement preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setInt(1, index);
 			preparedStatement.executeUpdate();
-		}catch (SQLException e){
-			System.out.println("Error");;
-		}finally {
+		} catch (SQLException e) {
+			System.out.println("Error");
+			;
+		} finally {
 			connectionPool.releaseConnection(connection);
 		}
 	}
-	
-	
-	
 
 	@Override
 	public void update(int index, Products product) {
@@ -91,35 +89,16 @@ public class ProductsDao implements IProductDAO{
 			preparedStatement.setInt(2, product.getPrice());
 			preparedStatement.setInt(3, index);
 			preparedStatement.execute();
-		}catch(SQLException e) {
+		} catch (SQLException e) {
 			System.out.println("Error");
-		}finally {
+		} finally {
 			connectionPool.releaseConnection(connection);
 		}
-	}
-
-	@Override
-	public int hashCode() {
-		return super.hashCode();
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		return super.equals(obj);
-	}
-
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
 	}
 
 	@Override
 	public String toString() {
 		return super.toString();
 	}
-
-	
-	
-	
 
 }

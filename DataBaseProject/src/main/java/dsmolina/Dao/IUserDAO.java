@@ -4,30 +4,21 @@ import java.util.List;
 
 import dsmolina.model.Users;
 
-public interface IUserDAO extends IBaseDAO <Users> {
+public interface IUserDAO extends IBaseDAO<Users> {
 
 	@Override
-	default Users getEntityById(int index) {
-		return null;
-	}
+	Users getEntityById(int index);
 
 	@Override
-	default List<Users> getEntities() {
-		return null;
-	}
+	List<Users> getEntities();
 
 	@Override
-	default void insert(Users t) {
-		
-	}
+	void insert(Users t);
 
 	@Override
-	default void delete(int index) {	
-	}
+	void delete(int index);
 
 	@Override
-	default void update(int index, Users t) {	
-	}
+	void update(int index, Users t);
 
-	
 }

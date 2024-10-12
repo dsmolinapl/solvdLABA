@@ -4,30 +4,21 @@ import java.util.List;
 
 import dsmolina.model.OrderDetails;
 
-public interface IOrderDetailsDAO extends IBaseDAO<OrderDetails>{
+public interface IOrderDetailsDAO extends IBaseDAO<OrderDetails> {
 
 	@Override
-	default OrderDetails getEntityById(int index) {
-		return null;
-	}
+	OrderDetails getEntityById(int index);
 
 	@Override
-	default List<OrderDetails> getEntities() {
-		return null;
-	}
+	List<OrderDetails> getEntities();
 
 	@Override
-	default void insert(OrderDetails t) {	
-	}
+	void insert(OrderDetails t);
 
 	@Override
-	default void delete(int index) {	
-	}
+	void delete(int index);
 
 	@Override
-	default void update(int index, OrderDetails t) {
-		
-	}
-	
+	void update(int index, OrderDetails t);
 
 }

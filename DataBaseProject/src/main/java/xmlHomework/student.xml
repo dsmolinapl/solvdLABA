@@ -1,0 +1,18 @@
+<students>
+	<student id="1">
+		<name>Anna</name>
+		<age>22</age>
+		<course>Java</course>
+	</student>
+	<student id="2">
+		<name>Misha</name>
+		<age>30</age>
+		<course>Java2</course>
+	</student>
+	<student id="3">
+		<name>Sofi</name>
+		<age>5</age>
+		<course>No course</course>
+	</student>
+</students>
+

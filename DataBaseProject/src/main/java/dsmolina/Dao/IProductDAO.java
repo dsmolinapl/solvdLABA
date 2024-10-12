@@ -4,37 +4,21 @@ import java.util.List;
 
 import dsmolina.model.Products;
 
-public interface IProductDAO extends IBaseDAO <Products> {
+public interface IProductDAO extends IBaseDAO<Products> {
 
 	@Override
-	default Products getEntityById(int index) {
-		
-		return null;
-	}
+	Products getEntityById(int index);
 
 	@Override
-	default List<Products> getEntities() {
-		
-		return null;
-	}
+	List<Products> getEntities();
 
 	@Override
-	default void insert(Products t) {
-		
-		
-	}
+	void insert(Products t);
 
 	@Override
-	default void delete(int index) {
-		
-		
-	}
+	void delete(int index);
 
 	@Override
-	default void update(int index, Products t) {
-		
-		
-	}
-	
+	void update(int index, Products t);
 
 }
