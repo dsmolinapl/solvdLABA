@@ -14,7 +14,8 @@ import jakarta.xml.bind.Marshaller;
 
 public class Main {
 	public static void main(String[] args) throws JAXBException, IOException, ParseException {
-	//I don't understand, why I can't see my Country(name, language) in Customer(unmarshal)
+		
+	
 		
 		System.out.println(unmarshal());
 		marshal();
