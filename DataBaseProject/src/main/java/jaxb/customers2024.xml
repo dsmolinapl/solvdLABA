@@ -1,0 +1,27 @@
+<customers>
+	<customer id="1">
+		<name>Lina</name>
+		<age>32</age>
+		<country>
+			<name>Poland</name>
+			<language>Polish</language>
+		</country>
+	</customer>
+	<customer id="2">
+		<name>Robert</name>
+		<age>42</age>
+		<country>
+			<name>USA</name>
+			<language>English</language>
+		</country>
+	</customer>
+	<customer id="3">
+		<name>Anna</name>
+		<age>23</age>
+		<country>
+			<name>Germany</name>
+			<language>German</language>
+			</country>
+	</customer>
+</customers>
+		

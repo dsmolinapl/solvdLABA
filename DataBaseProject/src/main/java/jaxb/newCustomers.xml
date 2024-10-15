@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customers>
+    <customer ID="4">
+        <name>Iryna</name>
+        <age>33</age>
+        <residence>
+            <name>USA</name>
+        </residence>
+        <date>15/10/2024</date>
+    </customer>
+    <customer ID="5">
+        <name>Nika</name>
+        <age>90</age>
+        <residence>
+            <name>Poland</name>
+        </residence>
+        <date>15/10/2024</date>
+    </customer>
+</customers>

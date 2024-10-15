@@ -40,7 +40,7 @@ public class ProductsDao implements IProductDAO {
 
 	@Override
 	public List<Products> getEntities() {
-		return IProductDAO.super.getEntities();
+		return null;
 	}
 
 	@Override

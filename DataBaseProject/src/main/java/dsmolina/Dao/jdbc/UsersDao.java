@@ -40,7 +40,7 @@ public class UsersDao implements IUserDAO {
 
 	@Override
 	public List<Users> getEntities() {
-		return IUserDAO.super.getEntities();
+		return null;
 	}
 
 	@Override
