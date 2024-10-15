@@ -4,7 +4,7 @@
         <name>Iryna</name>
         <age>33</age>
         <residence>
-            <name>USA</name>
+            <nameCountry>USA</nameCountry>
         </residence>
         <date>15/10/2024</date>
     </customer>
@@ -12,7 +12,7 @@
         <name>Nika</name>
         <age>90</age>
         <residence>
-            <name>Poland</name>
+            <nameCountry>Poland</nameCountry>
         </residence>
         <date>15/10/2024</date>
     </customer>

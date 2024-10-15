@@ -11,7 +11,7 @@
 		<name>Robert</name>
 		<age>42</age>
 		<country>
-			<name>USA</name>
+			<nameCountry>USA</nameCountry>
 			<language>English</language>
 		</country>
 	</customer>

@@ -15,9 +15,10 @@ import jakarta.xml.bind.Marshaller;
 public class Main {
 	public static void main(String[] args) throws JAXBException, IOException, ParseException {
 		
-	
-		
+		// “id” is not output to the console because of the annotated name change
+		Customers customers = unmarshal();
 		System.out.println(unmarshal());
+		System.out.println(customers.getList().getFirst().getCountry());
 		marshal();
 	}
 

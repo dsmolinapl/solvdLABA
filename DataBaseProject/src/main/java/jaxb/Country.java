@@ -1,39 +1,42 @@
 package jaxb;
 
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlTransient;
+import jakarta.xml.bind.annotation.XmlType;
 
 public class Country {
 
-	private String name;
+	private String nameCountry;
+	private String language;
 
-	public Country(String name, String language) {
+	public Country(String nameCountry, String language) {
 		super();
-		this.name = name;
+		this.nameCountry = nameCountry;
 		this.language = language;
 	}
 
 	@Override
 	public String toString() {
-		return "Country [name=" + name + ", language=" + language + "]";
+		return "Country [nameCountry=" + nameCountry + ", language=" + language + "]";
 	}
 
-	public String getName() {
-		return name;
+	public String getnameCountry() {
+		return nameCountry;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setnameCountry(String nameCountry) {
+		this.nameCountry = nameCountry;
 	}
 
 	public String getLanguage() {
 		return language;
 	}
-@XmlTransient
+
+	@XmlTransient
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-
-	private String language;
 
 	public Country() {
 	}
