@@ -61,7 +61,7 @@ public class Customer {
 	public Country getCountry() {
 		return country;
 	}
-	@XmlElement (name = "residence")
+	@XmlElement 
 	public void setCountry(Country country) {
 		this.country = country;
 	}

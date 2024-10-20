@@ -1,0 +1,68 @@
+[
+    {
+        "type": "Cat",
+        "age": 12,
+        "nickname": "Kolli",
+        "date": "20-10-2024",
+        "parent": {
+            "name": "Roni",
+            "age": 16
+        },
+        "owner": {
+            "name": "Ira",
+            "phone": "777-22-34"
+        },
+        "country": {
+            "name": "Poland",
+            "continent": "Europe"
+        },
+        "feeding": {
+            "atNight": "true",
+            "type": "predator"
+        }
+    },
+    {
+        "type": "Horse",
+        "age": 44,
+        "nickname": "Runn",
+        "date": "20-10-2024",
+        "parent": {
+            "name": "Moni",
+            "age": 66
+        },
+        "owner": {
+            "name": "Lola",
+            "phone": "999-87-80"
+        },
+        "country": {
+            "name": "Poland",
+            "continent": "Europe"
+        },
+        "feeding": {
+            "atNight": "false",
+            "type": "herbivore"
+        }
+    },
+    {
+        "type": "Dog",
+        "age": 2,
+        "nickname": "Luck",
+        "date": "20-10-2024",
+        "parent": {
+            "name": "Laffy",
+            "age": 6
+        },
+        "owner": {
+            "name": "Rita",
+            "phone": "098-45-33"
+        },
+        "country": {
+            "name": "Poland",
+            "continent": "Europe"
+        },
+        "feeding": {
+            "atNight": "false",
+            "type": "predator"
+        }
+    }
+]

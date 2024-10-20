@@ -1,0 +1,1 @@
+{"type":"Cat","nickname":"Kolli","date":"20-10-2024","parent":{"name":"Roni","age":16},"owner":{"name":"Darya","phone":"768-99-08"},"country":{"name":"Poland","continent":"EUR"},"feeding":{"atNight":true,"type":"predator"}}

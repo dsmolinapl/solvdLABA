@@ -3,17 +3,19 @@
     <customer ID="4">
         <name>Iryna</name>
         <age>33</age>
-        <residence>
+        <country>
+            <language>English</language>
             <nameCountry>USA</nameCountry>
-        </residence>
+        </country>
         <date>15/10/2024</date>
     </customer>
     <customer ID="5">
         <name>Nika</name>
         <age>90</age>
-        <residence>
+        <country>
+            <language>Polish</language>
             <nameCountry>Poland</nameCountry>
-        </residence>
+        </country>
         <date>15/10/2024</date>
     </customer>
 </customers>

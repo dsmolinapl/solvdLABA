@@ -1,0 +1,23 @@
+{
+	"type":"Dog",
+	"nickname":"Rex",
+	"age": 13,
+	"date":"20-10-2024",
+	"parent": {
+		"name":"Sharik",
+		"age": 18
+	},
+	"owner":{
+		"name":"Anna",
+		"phone":"333-99-07"
+	},
+	"country":{
+		"name":"Poland",
+		"continent":"Europe"
+	},
+	"feeding":{
+		"atNight":"true",
+		"type":"predator"
+	}
+
+}

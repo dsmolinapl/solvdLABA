@@ -21,11 +21,12 @@ public class Country {
 		return "Country [nameCountry=" + nameCountry + ", language=" + language + "]";
 	}
 
-	public String getnameCountry() {
+
+	public String getNameCountry() {
 		return nameCountry;
 	}
 
-	public void setnameCountry(String nameCountry) {
+	public void setNameCountry(String nameCountry) {
 		this.nameCountry = nameCountry;
 	}
 
@@ -33,7 +34,7 @@ public class Country {
 		return language;
 	}
 
-	@XmlTransient
+	//@XmlTransient
 	public void setLanguage(String language) {
 		this.language = language;
 	}

@@ -3,7 +3,7 @@
 		<name>Lina</name>
 		<age>32</age>
 		<country>
-			<name>Poland</name>
+			<nameCountry>Poland</nameCountry>
 			<language>Polish</language>
 		</country>
 	</customer>
@@ -19,7 +19,7 @@
 		<name>Anna</name>
 		<age>23</age>
 		<country>
-			<name>Germany</name>
+			<nameCountry>Germany</nameCountry>
 			<language>German</language>
 			</country>
 	</customer>
