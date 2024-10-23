@@ -22,7 +22,7 @@ public class Main {
 		Country country = customers.getList().get(0).getCountry(); // Get the first customer
 		System.out.println("Country Name: " + country.getNameCountry());
 		System.out.println(unmarshal());
-		System.out.println(customers.getList().getFirst().getCountry());
+		//System.out.println(customers.getList().getFirst().getCountry());
 		marshal();
 	}
 
